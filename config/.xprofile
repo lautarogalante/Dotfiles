@@ -1,0 +1,24 @@
+### keyboard ###
+
+setxkbmap es &
+
+### Compositor ###
+
+picom &
+
+### Wallpapers ###
+
+nitrogen --restore --random &
+
+### dwmblock ###
+
+dwmblocks &
+
+### Usb Port Detect ###
+
+udiskie -t &
+
+### Define Java Environment ###
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+
