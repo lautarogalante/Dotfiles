@@ -32,6 +32,18 @@ alias P='cd ~/Documentos/PdF'
 alias compress='ark -t'
 alias extr='unrar e'
 
+## Alias para iniciar y desactivar (mysql y apache).
+alias mysts='sudo systemctl status mysql'
+alias myon='sudo systemctl enable mysql'
+alias myst='sudo systemctl start mysql'
+alias myoff='sudo systemctl disable mysql'
+alias mystp='sudo systemctl stop mysql'
+## Apache
+alias asts='sudo systemctl status httpd.service'
+alias api='sudo systemctl enable httpd.service'
+alias apd='sudo systemctl disable httpd.service'
+alias apst='sudo systemctl start httpd.service'
+alias astp='sudo systemctl stop httpd.service'
 ## Java Programing Directory ###
 
 alias cr='java -jar ~/Documentos/CrearDirectorio-1.0-SNAPSHOT.jar'
@@ -48,4 +60,4 @@ PS1="[\$(date +%H:%M)] \]\[\e[32;40m\]{\u\[\e[m\]\[\e[31m\]  \[\e[m\]\[\e[33m
 # Prueba para configurar Prompt
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b " 
 
-source "$HOME/.cargo/env"
+#source "$HOME/.cargo/env"

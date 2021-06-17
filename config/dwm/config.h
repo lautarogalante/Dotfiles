@@ -114,6 +114,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	/* RedShift */
+	
+	{ MODKEY,			XK_r,		spawn,	SHCMD("redshift -O 2400") },
+	{ MODKEY,			XK_x,		spawn,	SHCMD("redshift -x") },
+
 };
 
 /* button definitions */
