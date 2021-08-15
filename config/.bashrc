@@ -53,7 +53,7 @@ PS1="[\$(date +%H:%M)] \]\[\e[32;40m\]\u\[\e[m\]\[\e[31m\] : \[\e[m\]\[\e[33m\]\
 #. "$HOME/.cargo/env"
 
 
-#export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## function bash
 
