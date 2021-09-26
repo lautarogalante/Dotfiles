@@ -1,8 +1,7 @@
 #
 # ~/.bashrc
-export EDITOR=nvim
+export EDITOR='nvim'
 export LC_ALL=es_AR.UTF-8
-#export TERM=xterm-256color
 
 #set -o vi
 # If not running interactively, don't do anything
@@ -62,8 +61,12 @@ mcd() {
   cd $1  
 }
 
+## Export go enviroment
+#export GOPATH=/home/lautaro/go/src
+#export GOBIN=$GOPATH/bin
+#export GOROOT=/usr/local/go
 
-
+#export PATH=$PATH:$GOBIN:$GOROOT/bin
 
 
 

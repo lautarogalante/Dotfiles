@@ -3,46 +3,42 @@ Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'justinmk/vim-sneak'
 Plug 'rust-lang/rust.vim'
-"Plug 'davidhalter/jedi-vim'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-jedi'
 call plug#end ()
 
 " Configurations
 syntax on
 
-filetype indent on
-
-set guioptions-=T
-set nocompatible
-set ignorecase
-set smartcase
-set incsearch
-set shortmess+=I
-set autoindent
-set clipboard=unnamed
+"set title
+"set guioptions-=T
+"set ignorecase
+"set smartcase
+"set incsearch
+"set shortmess+=I
+"set autoindent
 set number
 set noswapfile
-set relativenumber
+"set relativenumber
 set encoding=utf-8
 set scrolloff=2
-set hidden 
-set nowrap
-set nojoinspaces
+"set hidden 
+"set nowrap
+"set nojoinspaces
 set mouse+=a
-set laststatus=2
-"let g:sneak#label = 1
-"let g:deoplete#enable_at_startup = 1
+"set laststatus=2
+set spelllang=es,en
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set ai
+set hlsearch
+set ruler
+highlight Comment ctermfg=green
+
 let g:lightline = {
-   \ 'colorscheme': 'apprentice',
+  \ 'colorscheme': 'apprentice',
    \ }
 
-colorscheme delek
-
-" Config colors
-"if !has('gui_running')
-"  set t_Co=256
-"endif
+"colorscheme delek
 
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>

@@ -11,14 +11,16 @@ xrandr --output HDMI-1 --mode 1920x1080 --pos 1600x0 --rotate normal  --output V
 nitrogen --restore --random &
 
 ### dwmblock ###
-
-dwmblocks &
+#while true; do
+#   xsetroot -name "$(date)"
+#   sleep 1s
+#done &
+#dwmblocks &
 
 ### Usb Port Detect ###
 
-#udiskie -t &
+udiskie -t &
 
 ### Define Java Environment ###
-
-#export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
 
