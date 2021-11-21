@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Ubuntu Mono Bold Italic Nerd Font:size=15" };
-static const char dmenufont[]       = "mononoki Nerd Font Bold Italic:size=10";
+static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { " I ", " II ", " III ", " IV ", "  "};
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -73,7 +73,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             		XK_q,      killclient,     {0} },
+	{ MODKEY,	                XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -94,16 +94,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	
-	{ MODKEY|ShiftMask,             XK_q,          quit,           {0} },
-	{ MODKEY, 			XK_g,	       spawn, SHCMD("rofi -show drun ")},
-	{ MODKEY,                       XK_o,          spawn, SHCMD("alacritty") },
-	{ MODKEY,                       XK_v,          spawn, SHCMD("firefox-developer-edition") },
-	{ MODKEY,                       XK_n,          spawn, SHCMD("pcmanfm") },
-	
-	/* RedShift */
-        { MODKEY,                       XK_r,           spawn,  SHCMD("redshift -O 2400") },
-        { MODKEY,                       XK_x,           spawn,  SHCMD("redshift -x") },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY,			XK_v,	     spawn,	  SHCMD("firefox") },
+	{ MODKEY,			XK_g, 	   spawn,	  SHCMD("rofi -show drun") },
+	{ MODKEY,			XK_o,	     spawn,	  SHCMD("alacritty") },
+  { MODKEY,     XK_z,      spawn,   SHCMD("redshift -O 2400") },
+  { MODKEY,     XK_x,      spawn,   SHCMD("redshift -x") }
 };
 
 /* button definitions */
