@@ -4,6 +4,7 @@ import System.Exit
 
 import XMonad.Actions.SpawnOn
 import XMonad.Util.Run
+import XMonad.Hooks.ManageDocks
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -187,7 +188,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -258,8 +259,9 @@ myStartupHook = return ()
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar -x /home/lautaro/.xmobarrc"
-  xmonad defaults
+ xmproc <- spawnPipe "xmobar -x 0 ~/.xmonad/xmobar/.xmobarrc"
+ xmproc <- spawnPipe "xmobar -x 1 ~/.xmonad/xmobar/.xmobarrc1"
+ xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
