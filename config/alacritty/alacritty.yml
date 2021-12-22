@@ -105,8 +105,8 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: "mononoki Bold Italic Nerd Font Complete"
-    style: Bold     
+    family: "Ubuntu Mono Bold Italic Nerd Font Complete Mono"
+    style: Bold
 
   # Bold font face
   #bold:
@@ -172,7 +172,7 @@ colors:
   # Default colors
   primary:
     background: '#1d2021'      #'#424242'
-    foreground: '#d5c4a1'
+    foreground: '#d5c4a1'      #'#FFFFFF'
 
     # Bright and dim foreground colors
     #
@@ -191,7 +191,7 @@ colors:
   # affected cell, or hexadecimal colors like #ff00ff.
   cursor:
     text: '#1d2021' 
-    cursor: '#d5c4a1' 
+    cursor: '#FFFFFF' #d5c4a1
 
   # Vi mode cursor colors
   #
@@ -200,8 +200,8 @@ colors:
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #vi_mode_cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  # text: CellBackground
+  # cursor: CellForeground
 
   # Search colors
   #
@@ -209,7 +209,7 @@ colors:
   #search:
     # Allowed values are CellForeground and CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
+    #matches80:
     #  foreground: '#000000'
     #  background: '#ffffff'
     #focused_match:
@@ -228,7 +228,7 @@ colors:
   # By default, these will use the opposing primary color.
   #line_indicator:
   #  foreground: None
-  #  background: None
+  ##  background: None
 
   # Selection colors
   #
@@ -347,16 +347,16 @@ background_opacity: 1
   # When set to `true`, selected text will be copied to the primary clipboard.
   #save_to_clipboard: false
 
-#cursor:
+cursor:
   # Cursor style
-  #style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    # shape: Beam
+    shape: Block 
 
     # Cursor blinking state
     #
@@ -365,7 +365,7 @@ background_opacity: 1
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    #blinking: On
 
   # Vi mode cursor style
   #

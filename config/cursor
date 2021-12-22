@@ -1,0 +1,9 @@
+/usr/share/icons/default/index.theme
+
+[Icon Theme]
+Inherits=nombreCursor
+
+
+~/.config/gtk-3.0/settings.ini
+gtk-cursor-theme-name=nombreCursor
+
